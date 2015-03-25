@@ -42,8 +42,6 @@ class ControllerProvider implements ControllerProviderInterface, ServiceProvider
 
     $controllers->get('/', "statutes.controller:index");
 
-    $controllers->get('/statutes/{language}', "statutes.controller:statutes");
-
     return $controllers;
   }
 }

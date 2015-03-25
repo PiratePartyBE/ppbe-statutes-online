@@ -37,48 +37,28 @@
           </div>
         </div>
       </div>
-      <div class="cover-image"></div>
+      <div class="cover-image"><img src="/assets/img/cover.jpg" alt="" /></div>
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
             <h1>Statuten van Piratenpartij - Statuts du Parti Pirate</h1>
             <p>Statutes of the Belgian Pirate Party</p>
             <br>
-            <a class="btn btn-lg btn-default">Click me</a>
+            <a class="btn btn-lg btn-default" href="#main_menu" data-smoothscroller>Show me the statutes</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="section">
+    <div class="section" id="main_menu">
       <div class="container">
-        {% block contents %}
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="text-center">Team</h1>
-            <p class="text-center">We are a group of skilled individuals.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <img src="/assets/img/user_placeholder.png"
-              class="center-block img-circle img-responsive">
-            <h3 class="text-center">John Doe</h3>
-            <p class="text-center">Delevoper</p>
-          </div>
-          <div class="col-md-4">
-            <img src="/assets/img/user_placeholder.png"
-              class="center-block img-circle img-responsive">
-            <h3 class="text-center">John Doe</h3>
-            <p class="text-center">Delevoper</p>
-          </div>
-          <div class="col-md-4">
-            <img src="/assets/img/user_placeholder.png"
-              class="center-block img-circle img-responsive">
-            <h3 class="text-center">John Doe</h3>
-            <p class="text-center">Delevoper</p>
-          </div>
-        </div>
+        {% block menu %}
         {% endblock %}
+      </div>
+    </div>
+    <div class="section" id="main_contents">
+      <div class="container">
+      {% block contents %}
+      {% endblock %}
       </div>
     </div>
     <footer class="section section-primary">
@@ -120,12 +100,9 @@
     <script type="text/javascript" src="/bower_components/smooth-scroller/dist/smooth-scroller.bower.min.js"></script>
     <script type="text/javascript" src="/bower_components/toc/dist/toc.bower.min.js"></script>
     <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-    $(function() {
-      //Calls the tocify method on your HTML div.
-      $(".toc").toc();
-    });
-    </script>
+
+    {% block customjs %}
+    {% endblock %}
 
   </body>
 </html>

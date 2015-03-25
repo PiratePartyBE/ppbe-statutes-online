@@ -19,20 +19,11 @@ class StatutesController {
    * @return page output
    */
   public function index(Application $app) {
-    return $app['twig']->render('statutes/index.html.twig');
-  }
 
-  /**
-   * Serve the index page
-   * @param  Silex\Application $app
-   * @return page output
-   */
-  public function statutes(Application $app) {
-    // get lang from request
-    $language = $app['request']->get('language');
-    // load markdown file
+    $lang = array('nl_be','fr_be');
+    $html = array();
 
-    if ( $language === 'fr_be' || $language === 'nl_be' ) {
+    foreach ( $lang as $language ) {
 
       $md = file_get_contents("https://raw.githubusercontent.com/zefredz/ppbe-statutes-test/master/ppbe-statutes-{$language}.md");
       // parse markdown
@@ -46,13 +37,13 @@ class StatutesController {
           return "/$url";
         }
       };
-      $html = $parser->transform($md);
-      $html = str_replace('[TOC]', '<div class="toc"></div>', $html);
-      // display statutes
-      return $app['twig']->render('statutes/statutes.html.twig', array('body' => $html));
+
+      $html[$language] = str_replace('[TOC]', '<div class="toc_'.$language.'"></div>', $parser->transform($md) );
     }
-    else {
-      throw new Exception("Ressource not found!");
-    }
+
+    return $app['twig']->render('statutes/index.html.twig', array(
+      'body_nl_be' => $html['nl_be'],
+      'body_fr_be' => $html['fr_be'],
+    ));
   }
 }
