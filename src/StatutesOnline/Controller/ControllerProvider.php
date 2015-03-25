@@ -27,10 +27,6 @@ class ControllerProvider implements ControllerProviderInterface, ServiceProvider
    */
   public function register( Application $app ) {
 
-    $app['main.controller'] = $app->share(function() {
-        return new IndexController();
-    });
-
     $app['statutes.controller'] = $app->share(function() {
         return new StatutesController();
     });
@@ -44,9 +40,7 @@ class ControllerProvider implements ControllerProviderInterface, ServiceProvider
 
     $controllers = $app['controllers_factory'];
 
-    $controllers->get('/', "main.controller:index");
-
-    $controllers->get('/statutes', "statutes.controller:index");
+    $controllers->get('/', "statutes.controller:index");
 
     $controllers->get('/statutes/{language}', "statutes.controller:statutes");
 
