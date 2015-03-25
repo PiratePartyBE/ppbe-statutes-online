@@ -5,7 +5,9 @@
  * @details load configuration and services
  */
 
-$environment = getenv('APP_ENV') ?: 'development';
+if ( !isset($environment)) {
+  $environment = getenv('APP_ENV') ?: 'production';
+}
 
 $app = new \Silex\Application();
 
@@ -54,7 +56,9 @@ if ( ! file_exists(dirname($app['monolog.logfile'])) ) {
 // Enable providers for controllers
 $app->register(new \Silex\Provider\ServiceControllerServiceProvider());
 // Enable HTTP caching
-$app->register(new \Silex\Provider\HttpCacheServiceProvider());
+$app->register(new \Silex\Provider\HttpCacheServiceProvider( array(
+  'http_cache.cache_dir' => $app['http_cache.cache_dir'],
+)));
 // Enable translations
 $app->register(new \Silex\Provider\TranslationServiceProvider(), array(
     'locale_fallbacks' => array('en'),

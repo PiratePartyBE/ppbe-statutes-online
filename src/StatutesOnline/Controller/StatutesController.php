@@ -1,6 +1,7 @@
 <?php
 
 namespace StatutesOnline\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 use Silex\Application;
 use Michelf\Markdown;
@@ -41,9 +42,13 @@ class StatutesController {
       $html[$language] = str_replace('[TOC]', '<div class="toc_'.$language.'"></div>', $parser->transform($md) );
     }
 
-    return $app['twig']->render('statutes/index.html.twig', array(
+    $respHtml = $app['twig']->render('statutes/index.html.twig', array(
       'body_nl_be' => $html['nl_be'],
       'body_fr_be' => $html['fr_be'],
+    ));
+
+    return new Response($respHtml, 200, array(
+        'Cache-Control' => 's-maxage=5',
     ));
   }
 }
