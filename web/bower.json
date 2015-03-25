@@ -1,0 +1,25 @@
+{
+  "name": "ppbe-statutes-online",
+  "version": "0.1.0",
+  "authors": [
+    "zefredz <zefredz@gmail.com>"
+  ],
+  "description": "Belgian Pirate Party Online Statutes",
+  "main": "assets/css/main.css",
+  "license": "MIT",
+  "homepage": "http://pirateparty.be",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1",
+    "bootstrap": "~3.3",
+    "fontawesome": "~4.3",
+    "toc": "~0.3"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "tmp.path": "%base_path%/tmp",
+  "cache.path": "%base_path%/tmp/cache",
+  "http_cache.cache_dir": "%base_path%/tmp/cache/http",
+  "twig.options.cache": "%base_path%/tmp/cache/twig",
+  "log.path": "%base_path%/logs"
+}

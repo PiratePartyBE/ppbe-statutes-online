@@ -1,0 +1,63 @@
+{
+  "name": "zefredz/ppbe-statutes-web",
+  "description": "Web application to display statutes of the Belgian Pirate Party online",
+  "license": "AGPL-3.0",
+  "authors": [
+    {
+      "name": "Frederic Minne",
+      "email": "zefredz@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+
+    "pimple/pimple": "~1.0",
+    "psr/log": "~1.0",
+
+    "jyggen/persona": "1.1.*@dev",
+
+    "twig/twig": ">=1.8.0,<2.0-dev",
+    "monolog/monolog": "~1.4,>=1.4.1",
+    "illuminate/database": "~5.0",
+
+    "silex/silex": "~1.2",
+
+    "symfony/event-dispatcher": "~2.3,<3.0",
+    "symfony/http-foundation": "~2.3,<3.0",
+    "symfony/http-kernel": "~2.3,<3.0",
+    "symfony/routing": "~2.3,<3.0",
+    "symfony/security": "~2.3,<3.0",
+    "symfony/config": "~2.3,<3.0",
+    "symfony/locale": "~2.3,<3.0",
+    "symfony/form": "~2.3,<3.0",
+    "symfony/debug": "~2.3,<3.0",
+    "symfony/dom-crawler": "~2.3,<3.0",
+    "symfony/finder": "~2.3,<3.0",
+    "symfony/monolog-bridge": "~2.3,<3.0",
+    "symfony/options-resolver": "~2.3,<3.0",
+    "symfony/process": "~2.3,<3.0",
+    "symfony/serializer": "~2.3,<3.0",
+    "symfony/translation": "~2.3,<3.0",
+    "symfony/twig-bridge": "~2.3,<3.0",
+    "symfony/validator": "~2.3,<3.0",
+    "symfony/yaml": "~2.3,<3.0",
+
+    "igorw/config-service-provider": "~1.2",
+
+    "knplabs/github-api": "~1.4",
+    "michelf/php-markdown": "~1.5"
+  },
+  "require-dev": {
+    "sensiolabs/security-checker": "~2.0",
+    "phpunit/phpunit": "~3.7",
+    "symfony/browser-kit": "~2.3",
+    "symfony/css-selector": "~2.3,<3.0",
+    "silex/web-profiler": "~1.0.1"
+  },
+  "autoload": {
+    "psr-0": {
+      "StatutesOnline\\": "src/"
+    }
+  }
+}
+

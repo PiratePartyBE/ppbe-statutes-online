@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+
+$env = 'production';
+$app = require __DIR__.'/../app/app.php';
+
+// force booting the application since we are not runing it from the front controller
+$app->boot();
+
+$console = require __DIR__.'/../app/console.php';
+$console->run();
