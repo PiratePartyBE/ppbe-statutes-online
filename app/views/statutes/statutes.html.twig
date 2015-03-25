@@ -1,0 +1,20 @@
+{% extends "layout.html.twig" %}
+
+{% block menu %}
+
+{% endblock %}
+
+{% block contents %}
+<div id="body_statutes">
+{{ body|raw }}
+</div>
+{% endblock %}
+
+{% block customjs %}
+<script>
+$(function() {
+  //Calls the tocify method on your HTML div.
+  $(".toc").toc({container: '#body_statutes'});
+});
+</script>
+{% endblock %}
