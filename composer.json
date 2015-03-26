@@ -14,11 +14,8 @@
     "pimple/pimple": "~1.0",
     "psr/log": "~1.0",
 
-    "jyggen/persona": "1.1.*@dev",
-
     "twig/twig": ">=1.8.0,<2.0-dev",
     "monolog/monolog": "~1.4,>=1.4.1",
-    "illuminate/database": "~5.0",
 
     "silex/silex": "~1.2",
 
@@ -60,4 +57,3 @@
     }
   }
 }
-
