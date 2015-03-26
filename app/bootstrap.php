@@ -17,6 +17,7 @@ $app = new \Silex\Application();
 
 $app['app.path'] = __DIR__;
 $app['data.path'] = __DIR__ . '/../data';
+$app['base_url'] = $environment == 'development' ? '/index_dev.php/' : '/';
 
 // Common configuration options for all environments
 $app->register(
