@@ -1,7 +1,7 @@
-{% extends "layout.html.twig" %}
+{% extends "newlayout.html.twig" %}
 
 {% block customstyles %}
-<link rel="stylesheet" href="/assets/css/bootsidemenu.css" />
+<link rel="stylesheet" href="/assets/css/toc.css" />
 {% endblock %}
 
 {% block menu %}
@@ -29,18 +29,23 @@
 
 {% block contents %}
 <a href="#main_menu" data-smoothscroller>Back to menu</a>
-<div id="body_statutes">
-{{ body|raw }}
+<div class="row">
+
+  <div class="col-sm-3 col-md-2 sidebar">
+    <div class="toc" id="toc-menu"></div>
+  </div>
+
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="row" id="body_statutes">
+      {{ body|raw }}
+    </div>
+  </div>
+
 </div>
 {% endblock %}
 
 {% block customjs %}
-<script type="text/javascript" src="/assets/js/bootsidemenu.js"></script>
-<script>
-$(function() {
-  //Calls the tocify method on your HTML div.
-  $(".toc").toc({container: '#body_statutes'});
-  $('#toc-menu').BootSideMenu({side:"left", autoClose:false});
-});
-</script>
+<script type="text/javascript" src="/bower_components/smooth-scroller/dist/smooth-scroller.bower.min.js"></script>
+<script type="text/javascript" src="/bower_components/toc/dist/toc.bower.min.js"></script>
+<script type="text/javascript" src="/assets/js/toc.js"></script>
 {% endblock %}

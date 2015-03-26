@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/dashboard.css" />
+    {% block customstyles %}{% endblock %}
+    {% block head %}
+      <title>Belgian Pirate Party Online Statutes</title>
+    {% endblock %}
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://wiki.pirateparty.be/index.php/Main_Page"><span>PartiPiratenPartij</span></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="{{ app.base_url }}">Home</a>
+            </li>
+            <li>
+              <a href="#page_footer" data-smoothscroller>About</a>
+            </li>
+            <li>
+              <a href="#page_footer" data-smoothscroller>Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+            {% block contents %}
+            {% endblock %}
+      </div>
+    </div>
+
+    <footer class="section section-primary col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="page_footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>PartiPiratenPartij</h1>
+            <p>
+              Le Parti Pirate de Belgique est issu du mouvement pirate international.
+              Nos valeurs de bases sont la démocratie directe, la transparence et la protection des droits individuels.
+              <br>
+              De Piratenpartij van België maakt deel uit van de internationale Piraten beweging.
+              Onze kernwaarden zijn Directe democratie, transparantie en de bescherming van de individuele rechten.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-info text-right">
+              <br>
+              <br>
+            </p>
+            <div class="row">
+              <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                <a href="http://pirateparty.be"><i class="fa fa-3x fa-fw fa-home text-inverse"></i></a>
+                <a href="http://wiki.pirateparty.be/index.php/Main_Page"><i class="fa fa-3x fa-fw fa-institution text-inverse"></i></a>
+                <a href="https://twitter.com/piratesbelgium"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="https://www.facebook.com/pirateparty.be"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="https://github.com/zefredz/ppbe-statutes-online"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 hidden-xs text-right">
+                <a href="http://pirateparty.be"><i class="fa fa-3x fa-fw fa-home text-inverse"></i></a>
+                <a href="http://wiki.pirateparty.be/index.php/Main_Page"><i class="fa fa-3x fa-fw fa-institution text-inverse"></i></a>
+                <a href="https://twitter.com/piratesbelgium"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="https://www.facebook.com/pirateparty.be"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="https://github.com/zefredz/ppbe-statutes-online"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    {% block customjs %}{% endblock %}
+  </body>
+</html>

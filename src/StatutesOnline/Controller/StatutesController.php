@@ -50,7 +50,7 @@ class StatutesController {
       }
     };
 
-    $html = str_replace('[TOC]', '<div class="toc" id="toc-menu"><div class="list-group"></div></div>', $parser->transform($md) );
+    $html = str_replace('[TOC]', '', $parser->transform($md) );
 
     $respHtml = $app['twig']->render('statutes/statutes.html.twig', array(
       'body' => $html
