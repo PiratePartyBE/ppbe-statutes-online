@@ -12,33 +12,21 @@
     <img src="/assets/img/nl.png"
       class="center-block img-circle img-responsive">
     <h3 class="text-center">nl_be</h3>
-    <p class="text-center"><a href="#body_nl_be" data-smoothscroller>Vlaams</a></p>
+    <p class="text-center"><a href="{{ app.base_url }}statutes/nl_be#main_contents">Vlaams</a></p>
   </div>
   <div class="col-md-6">
     <img src="/assets/img/fr.png"
       class="center-block img-circle img-responsive">
     <h3 class="text-center">fr_be</h3>
-    <p class="text-center"><a href="#body_fr_be" data-smoothscroller>Français</a></p>
+    <p class="text-center"><a href="{{ app.base_url }}statutes/fr_be#main_contents">Français</a></p>
   </div>
 </div>
 {% endblock %}
 
 {% block contents %}
-<div id="body_nl_be"><a href="#main_menu" data-smoothscroller>Back to versions</a>
-{{ body_nl_be|raw }}
-</div>
 
-<div id="body_fr_be"><a href="#main_menu" data-smoothscroller>Back to versions</a>
-{{ body_fr_be|raw }}
-</div>
 {% endblock %}
 
 {% block customjs %}
-<script>
-$(function() {
-  //Calls the tocify method on your HTML div.
-  $(".toc_nl_be").toc({container: '#body_nl_be'});
-  $(".toc_fr_be").toc({container: '#body_fr_be'});
-});
-</script>
+
 {% endblock %}

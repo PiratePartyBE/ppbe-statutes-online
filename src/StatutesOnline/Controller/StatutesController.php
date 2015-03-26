@@ -21,31 +21,7 @@ class StatutesController {
    */
   public function index(Application $app) {
 
-    $lang = array('nl_be','fr_be');
-    $html = array();
-
-    foreach ( $lang as $language ) {
-
-      $md = file_get_contents("https://raw.githubusercontent.com/zefredz/ppbe-statutes-test/master/ppbe-statutes-{$language}.md");
-      // parse markdown
-      $parser = new Markdown;
-      // rewrite internal url
-      $parser->url_filter_func = function ($url) {
-        if ( strpos( $url, 'http' ) === 0 ) {
-          return $url;
-        }
-        else {
-          return "/$url";
-        }
-      };
-
-      $html[$language] = str_replace('[TOC]', '<div class="toc_'.$language.'"></div>', $parser->transform($md) );
-    }
-
-    $respHtml = $app['twig']->render('statutes/index.html.twig', array(
-      'body_nl_be' => $html['nl_be'],
-      'body_fr_be' => $html['fr_be'],
-    ));
+    $respHtml = $app['twig']->render('statutes/index.html.twig');
 
     return new Response($respHtml, 200, array(
         'Cache-Control' => 's-maxage=5',
@@ -60,7 +36,7 @@ class StatutesController {
   public function statutes(Application $app) {
 
     $language = $app['request']->get('language');
-    
+
     $md = file_get_contents("https://raw.githubusercontent.com/zefredz/ppbe-statutes-test/master/ppbe-statutes-{$language}.md");
     // parse markdown
     $parser = new Markdown;

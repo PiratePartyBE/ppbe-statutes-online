@@ -1,10 +1,30 @@
 {% extends "layout.html.twig" %}
 
 {% block menu %}
-
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-center">Versions</h1>
+    <p class="text-center">Choose the language you want to display.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <img src="/assets/img/nl.png"
+      class="center-block img-circle img-responsive">
+    <h3 class="text-center">nl_be</h3>
+    <p class="text-center"><a href="{{ app.base_url }}statutes/nl_be#main_contents">Vlaams</a></p>
+  </div>
+  <div class="col-md-6">
+    <img src="/assets/img/fr.png"
+      class="center-block img-circle img-responsive">
+    <h3 class="text-center">fr_be</h3>
+    <p class="text-center"><a href="{{ app.base_url }}statutes/fr_be#main_contents">Français</a></p>
+  </div>
+</div>
 {% endblock %}
 
 {% block contents %}
+<a href="#main_menu" data-smoothscroller>Back to menu</a>
 <div id="body_statutes">
 {{ body|raw }}
 </div>
