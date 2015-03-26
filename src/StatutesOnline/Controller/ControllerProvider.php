@@ -6,8 +6,6 @@ use Silex\Application;
 use Silex\ControllerProviderInterface;
 use Silex\ServiceProviderInterface;
 
-use StatutesOnline\Controller\IndexController;
-
 /**
  * Implements the ControllerProviderInterface and .
  */
