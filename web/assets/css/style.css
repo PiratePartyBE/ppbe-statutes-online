@@ -1,13 +1,13 @@
 @import url("http://fonts.googleapis.com/css?family=Lato|Lato");
 /*!
- * Default theme for Pingendo 
- * Homepage: http://pingendo.com  
- * Copyright 2015 Pingendo 
- * Licensed under MIT 
+ * Default theme for Pingendo
+ * Homepage: http://pingendo.com
+ * Copyright 2015 Pingendo
+ * Licensed under MIT
  * Based on Bootstrap v3.3.2
 */
-/* Add custom CSS classes here 
- * 
+/* Add custom CSS classes here
+ *
  * img {
  *   box-shadow : 0px 0px 10px black !important;
  * }
@@ -6551,7 +6551,7 @@ button.close {
 */
 /* Google web fonts support */
 /*@import  url("http://fonts.googleapis.com/css?family=");*/
-/* TODO: webkit need this why ?*/
+
 html,
 body {
   height: 100%;
@@ -6559,7 +6559,7 @@ body {
 .text-inverse {
   color: #ffffff;
 }
-/* TODO: verify if we can touch only section */
+
 .jumbotron {
   margin-bottom: 0px !important;
 }
