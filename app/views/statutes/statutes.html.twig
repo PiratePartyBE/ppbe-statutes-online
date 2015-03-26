@@ -1,5 +1,9 @@
 {% extends "layout.html.twig" %}
 
+{% block customstyles %}
+<link rel="stylesheet" href="/assets/css/bootsidemenu.css" />
+{% endblock %}
+
 {% block menu %}
 <div class="row">
   <div class="col-md-12">
@@ -31,10 +35,12 @@
 {% endblock %}
 
 {% block customjs %}
+<script type="text/javascript" src="/assets/js/bootsidemenu.js"></script>
 <script>
 $(function() {
   //Calls the tocify method on your HTML div.
   $(".toc").toc({container: '#body_statutes'});
+  $('#toc-menu').BootSideMenu({side:"left", autoClose:false});
 });
 </script>
 {% endblock %}

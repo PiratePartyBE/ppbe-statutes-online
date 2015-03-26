@@ -1,20 +1,6 @@
-.toc {
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    position: fixed;
-    background: #333;
-    box-shadow: inset -5px 0 5px 0px #000;
-    width: 150px;
-    padding-top: 20px;
-    color: #fff;
-    overflow: auto;
-}
 
 .toc ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  list-style: none;
 }
 
 .toc li {
