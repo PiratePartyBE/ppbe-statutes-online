@@ -48,8 +48,11 @@ class StatutesController {
 
     $html = str_replace('[TOC]', '', $parser->transform($md) );
 
+    $title = $language == 'nl_be' ? 'Statuten van Piratenpartij' : 'Statuts du Parti Pirate';
+
     return $app['twig']->render('statutes/statutes.html.twig', array(
-      'body' => $html
+      'body' => $html,
+      'title' => $title
     ));
   }
 }

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/assets/css/dashboard.css" />
     {% block customstyles %}{% endblock %}
     {% block head %}
-      <title>Belgian Pirate Party Online Statutes</title>
+      <title>{{ title }}</title>
     {% endblock %}
   </head>
   <body>
@@ -70,10 +70,11 @@
             </p>
           </div>
           <div class="col-sm-6">
-            <p class="text-info text-right">
+            <h2 class="text-right">Contact us</h2>
+            <!-- p class="text-info text-right">
               <br>
               <br>
-            </p>
+            </p -->
             <div class="row">
               <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
                 <a href="http://pirateparty.be"><i class="fa fa-3x fa-fw fa-home text-inverse"></i></a>
@@ -85,11 +86,11 @@
             </div>
             <div class="row">
               <div class="col-md-12 hidden-xs text-right">
-                <a href="http://pirateparty.be"><i class="fa fa-3x fa-fw fa-home text-inverse"></i></a>
-                <a href="http://wiki.pirateparty.be/index.php/Main_Page"><i class="fa fa-3x fa-fw fa-institution text-inverse"></i></a>
-                <a href="https://twitter.com/piratesbelgium"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                <a href="https://www.facebook.com/pirateparty.be"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                <a href="https://github.com/zefredz/ppbe-statutes-online"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                <a href="http://pirateparty.be" title="Homepage"><i class="fa fa-3x fa-fw fa-home text-inverse"></i></a>
+                <a href="http://wiki.pirateparty.be/index.php/Main_Page" title="Wiki"><i class="fa fa-3x fa-fw fa-institution text-inverse"></i></a>
+                <a href="https://twitter.com/piratesbelgium" title="@piratesbelgium"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="https://www.facebook.com/pirateparty.be" title="pirateparty.be"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="https://github.com/zefredz/ppbe-statutes-online" title="Fork this website"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
               </div>
             </div>
           </div>
