@@ -21,11 +21,7 @@ class StatutesController {
    */
   public function index(Application $app) {
 
-    $respHtml = $app['twig']->render('statutes/index.html.twig');
-
-    return new Response($respHtml, 200, array(
-        'Cache-Control' => 's-maxage=5',
-    ));
+    return $app['twig']->render('statutes/index.html.twig');
   }
 
   /**
@@ -52,12 +48,8 @@ class StatutesController {
 
     $html = str_replace('[TOC]', '', $parser->transform($md) );
 
-    $respHtml = $app['twig']->render('statutes/statutes.html.twig', array(
+    return $app['twig']->render('statutes/statutes.html.twig', array(
       'body' => $html
-    ));
-
-    return new Response($respHtml, 200, array(
-        'Cache-Control' => 's-maxage=5',
     ));
   }
 }
