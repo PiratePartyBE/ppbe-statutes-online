@@ -28,3 +28,10 @@ php -S localhost:8001
 And go to localhost:8001 in your web browser.
 
 Go to localhost:8001/index_dev.php for the development/debug version.
+
+## TODO List
+
+* Use caching for the GitHub files
+* Use GitHub API to retrieve the statutes
+* Cache the generated HTML
+* Generate the TOC on the server side
