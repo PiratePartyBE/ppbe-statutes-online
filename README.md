@@ -29,7 +29,7 @@ And go to localhost:8001 in your web browser.
 
 Go to localhost:8001/index_dev.php for the development/debug version.
 
-## Things to do next
+## Features to implement next
 
 * Use caching for the GitHub files
 * Use GitHub API to retrieve the statutes
