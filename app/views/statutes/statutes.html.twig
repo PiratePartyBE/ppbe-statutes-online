@@ -30,9 +30,8 @@
 {% block contents %}
 <a href="#main_menu" data-smoothscroller>Back to menu</a>
 <div class="row">
-
   <div class="col-sm-3 col-md-2 sidebar">
-    <div class="toc" id="toc-menu"></div>
+    <div class="toc" id="toc-menu">{{ menu|raw }}</div>
   </div>
 
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -48,4 +47,6 @@
 <script type="text/javascript" src="/bower_components/smooth-scroller/dist/smooth-scroller.bower.min.js"></script>
 <script type="text/javascript" src="/bower_components/toc/dist/toc.bower.min.js"></script>
 <script type="text/javascript" src="/assets/js/toc.js"></script>
+<!-- script type="text/javascript" src="/assets/js/smoothscrolling.js"></script>
+<script type="text/javascript" src="/assets/js/toc.js"></script -->
 {% endblock %}

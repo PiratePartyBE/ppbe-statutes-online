@@ -4,6 +4,7 @@ namespace StatutesOnline\Controller;
 
 use Silex\Application;
 use Michelf\Markdown;
+use StatutesOnline\Html\Toc;
 
 /**
  * Index controller
@@ -45,12 +46,20 @@ class StatutesController {
       }
     };
 
-    $html = str_replace('[TOC]', '', $parser->transform($md) );
+    $tocGenerator = new Toc;
+
+    $body =  str_replace('[TOC]', '', $parser->transform($md) );
+
+    $generated = $tocGenerator->generateToc( $body );
+
+    $html = $generated['html'];
+    $toc = $generated['toc'];
 
     $title = $language == 'nl_be' ? 'Statuten van Piratenpartij' : 'Statuts du Parti Pirate';
 
     return $app['twig']->render('statutes/statutes.html.twig', array(
-      'body' => $html,
+      'body' => $body,
+      'menu' => '',
       'title' => $title
     ));
   }
