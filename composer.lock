@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d2096b4cd0c7cd8c6259313d2ed3d0f5",
+    "hash": "a59d2e817611fe8980279e490120f910",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -160,16 +160,16 @@
         },
         {
             "name": "knplabs/github-api",
-            "version": "1.4.4",
+            "version": "1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/php-github-api.git",
-                "reference": "fe666bd091c8721866654879a031f840b250e4ff"
+                "reference": "d561376583db696f9b09d595f3767af64640ae4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/fe666bd091c8721866654879a031f840b250e4ff",
-                "reference": "fe666bd091c8721866654879a031f840b250e4ff",
+                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/d561376583db696f9b09d595f3767af64640ae4d",
+                "reference": "d561376583db696f9b09d595f3767af64640ae4d",
                 "shasum": ""
             },
             "require": {
@@ -217,7 +217,7 @@
                 "gist",
                 "github"
             ],
-            "time": "2015-02-23 16:36:53"
+            "time": "2015-03-28 00:40:32"
         },
         {
             "name": "michelf/php-markdown",
@@ -426,6 +426,47 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "querypath/querypath",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/technosophos/querypath.git",
+                "reference": "13224745f7348e099d2dde9e555bc8972c21a810"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/technosophos/querypath/zipball/13224745f7348e099d2dde9e555bc8972c21a810",
+                "reference": "13224745f7348e099d2dde9e555bc8972c21a810",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "QueryPath": "src/"
+                },
+                "files": [
+                    "src/qp_functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "HTML/XML querying (CSS 4 or XPath) and processing (like jQuery)",
+            "homepage": "https://github.com/technosophos/querypath",
+            "keywords": [
+                "css",
+                "html",
+                "jquery",
+                "xml",
+                "xslt"
+            ],
+            "time": "2014-09-23 19:04:19"
         },
         {
             "name": "silex/silex",
@@ -2310,17 +2351,17 @@
         },
         {
             "name": "silex/web-profiler",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "target-dir": "Silex/Provider",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Silex-WebProfiler.git",
-                "reference": "dc371e211d1f3ee62cb822518f4f97b44d1c250a"
+                "reference": "f0797151b766e41ab953e81bc66eb9d9114800f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Silex-WebProfiler/zipball/dc371e211d1f3ee62cb822518f4f97b44d1c250a",
-                "reference": "dc371e211d1f3ee62cb822518f4f97b44d1c250a",
+                "url": "https://api.github.com/repos/silexphp/Silex-WebProfiler/zipball/f0797151b766e41ab953e81bc66eb9d9114800f5",
+                "reference": "f0797151b766e41ab953e81bc66eb9d9114800f5",
                 "shasum": ""
             },
             "require": {
@@ -2351,7 +2392,7 @@
             ],
             "description": "A WebProfiler for Silex",
             "homepage": "http://silex.sensiolabs.org/",
-            "time": "2014-11-24 08:26:12"
+            "time": "2015-03-27 13:32:13"
         },
         {
             "name": "symfony/browser-kit",

@@ -42,7 +42,8 @@
     "igorw/config-service-provider": "~1.2",
 
     "knplabs/github-api": "~1.4",
-    "michelf/php-markdown": "~1.5"
+    "michelf/php-markdown": "~1.5",
+    "querypath/querypath": "~3.0"
   },
   "require-dev": {
     "sensiolabs/security-checker": "~2.0",
