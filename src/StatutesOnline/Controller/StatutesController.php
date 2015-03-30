@@ -1,7 +1,6 @@
 <?php
 
 namespace StatutesOnline\Controller;
-use Symfony\Component\HttpFoundation\Response;
 
 use Silex\Application;
 use Michelf\Markdown;
