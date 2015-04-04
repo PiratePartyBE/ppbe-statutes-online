@@ -1,0 +1,68 @@
+.statutes {
+  counter-reset: h2;
+}
+
+.statutes h2 {
+  counter-reset: h3;
+}
+
+.statutes h3 {
+  counter-reset: p h4;
+}
+
+.statutes h4 {
+  counter-reset: p h5;
+}
+
+.statutes h5 {
+  counter-reset: p;
+}
+
+.statutes ol {
+  list-style-type: lower-latin;
+  /*list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  counter-reset: li;*/
+}
+
+.statutes h2:before {
+  counter-increment: h2;
+  content: "Partie " counter(h2, upper-roman) ". ";
+}
+
+.statutes h3:before {
+  counter-increment: h3;
+  content: "Chapitre " counter(h2, upper-roman) "." counter(h3) ". ";
+}
+
+.statutes h4:before {
+  counter-increment: h4;
+  content: counter(h2, upper-roman) "." counter(h3) "." counter(h4) ". ";
+}
+
+.statutes h5:before {
+  counter-increment: h5;
+  content: counter(h2, upper-roman) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+}
+
+.statutes p:before {
+  counter-increment: p;
+  content: counter(h2, upper-roman) "." counter(h3) "." counter(h4) "." counter(p) ". ";
+}
+
+/*.statutes li:before {
+  counter-increment: li;
+  content: counter(h2, upper-roman) "." counter(h3) "." counter(h4) "." counter(p) "." counter(li, lower-latin) ". ";
+}*/
+
+.statutes h5:before {
+  counter-increment: h5;
+  content: counter(h2, upper-roman) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+}
+
+.statutes h6:before {
+  counter-increment: h6;
+  content: counter(h2, upper-roman) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". ";
+}
+
