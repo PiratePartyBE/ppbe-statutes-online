@@ -3,5 +3,6 @@
   "cache.path": "%base_path%/tmp/cache",
   "http_cache.cache_dir": "%base_path%/tmp/cache/http",
   "twig.options.cache": "%base_path%/tmp/cache/twig",
-  "log.path": "%base_path%/logs"
+  "log.path": "%base_path%/logs",
+  "statutes.cache": true
 }

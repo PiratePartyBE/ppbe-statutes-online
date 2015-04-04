@@ -33,7 +33,14 @@ class StatutesController {
 
     $language = $app['request']->get('language');
 
-    $md = file_get_contents("assets/statutes/{$language}.md");
+    if ( $app['statutes.cache'] ) {
+      $md = file_get_contents("assets/statutes/{$language}.md");
+    }
+    else {
+      $md = file_get_contents("https://raw.githubusercontent.com/zefredz/ppbe-statutes-test/master/ppbe-statutes-{$language}.md");
+    }
+
+
     // parse markdown
     $parser = new Markdown;
     // rewrite internal url
