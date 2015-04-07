@@ -52,8 +52,6 @@ class StatutesController {
       }
     };
 
-    $tocGenerator = new Toc;
-
     $body =  str_replace('[TOC]', '', $parser->transform($md) );
 
     $title = $language == 'nl_be' ? 'Statuten van Piratenpartij' : 'Statuts du Parti Pirate';
