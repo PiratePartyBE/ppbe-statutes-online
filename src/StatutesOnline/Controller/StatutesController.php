@@ -4,7 +4,6 @@ namespace StatutesOnline\Controller;
 
 use Silex\Application;
 use Michelf\Markdown;
-use StatutesOnline\Html\Toc;
 
 /**
  * Index controller
@@ -56,11 +55,6 @@ class StatutesController {
     $tocGenerator = new Toc;
 
     $body =  str_replace('[TOC]', '', $parser->transform($md) );
-
-    $generated = $tocGenerator->generateToc( $body );
-
-    $html = $generated['html'];
-    $toc = $generated['toc'];
 
     $title = $language == 'nl_be' ? 'Statuten van Piratenpartij' : 'Statuts du Parti Pirate';
 

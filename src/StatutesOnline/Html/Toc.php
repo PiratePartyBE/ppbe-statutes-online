@@ -38,7 +38,6 @@ class Toc {
       else {
         $id = $cmd->safeId($qpitem->text());
         $item->setAttribute('id', $id);
-        // $qpitem->setAttribute('id', $id);
       }
 
       $toc .= '<li class="toc-h'.$level.'"><a href="#' . $id . '" data-smoothscroller2="data-smoothscroller2">' . $qpitem->innerHTML() . "</a></li>\n";
