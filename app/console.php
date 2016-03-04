@@ -13,7 +13,7 @@ use Symfony\Component\Finder\Finder;
 $console = new Console\Application('PPBE Statutes Online', '0.1');
 
 $helperSet = new Console\Helper\HelperSet();
-$helperSet->set(new Console\Helper\DialogHelper(), 'dialog');
+$helperSet->set(new Console\Helper\QuestionHelper(), 'question');
 $console->setHelperSet($helperSet);
 
 
